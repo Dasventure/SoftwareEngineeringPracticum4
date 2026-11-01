@@ -1,0 +1,25 @@
+@startuml logic
+title Step 6
+
+
+
+start
+
+* S1
+** S1.1
+** S1.2
+* S2
+
+
+if (Graphviz installed?) then (yes)
+  :process all\ndiagrams;
+else (no)
+  :process only
+  __sequence__ and __activity__ diagrams;
+endif
+
+
+
+stop
+
+@enduml
