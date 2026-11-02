@@ -128,23 +128,23 @@ endwhile
 
 
 
-: 119 - 123;
+: 119 - 121;
 !ifdef SHOW_CODE_MAX
 note right
-schedule = student.get_schedule()
 courses_with_not_enough_credits = 0
 approved_courses = []
 end note
 !endif
 
-if (125) then (True)
+if (123) then (True)
     !ifdef SHOW_CODE_MIN
     note right: if not should_return:
     !endif
 
-    : 126 - 128;
+    : 124 - 128;
     !ifdef SHOW_CODE_MAX
     note right
+        schedule = student.get_schedule()
         adjusted_remaining_credits = student.get_available_credits()
         _need_stop = False
     end note

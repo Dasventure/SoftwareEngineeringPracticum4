@@ -116,13 +116,13 @@ def enroll_in_courses(student: Student, courses: list[Course], max_skipped: int,
                     should_return = True
             i += 1
 
-    schedule = student.get_schedule()
-
     courses_with_not_enough_credits = 0
 
     approved_courses = []
 
     if not should_return:
+        schedule = student.get_schedule()
+
         adjusted_remaining_credits = student.get_available_credits()
 
         _need_stop = False
