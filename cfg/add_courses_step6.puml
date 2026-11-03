@@ -3,6 +3,8 @@ start
 !ifndef STEP_6
 !define STEP_6
 
+skinparam ConditionEndStyle hline
+
 title enroll_in_courses Step 6
 
 '!define SHOW_CODE_MIN

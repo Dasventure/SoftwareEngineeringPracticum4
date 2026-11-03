@@ -163,5 +163,6 @@ In other words, there are three situations in which this expression can terminat
 2. [adjusted_remaining_credits] is zero or negative;
 3. [courses] is zero, AND [adjusted_remaining_credits] is zero or negative
 
-The previous version implemented only option 3, manually setting the length of [courses] to zero, regardless of the actual length.
+The implementation was correct for options 1 and 3, when [courses] is zero, but for option 2, [courses] was manually set to zero, which is obviously not what is expected
+
 '''
