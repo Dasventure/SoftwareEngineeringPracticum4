@@ -3,12 +3,12 @@ start
 !ifndef STEP_6
 !define STEP_6
 
+'!define SHOW_CODE_MIN
+'!define SHOW_CODE_MAX
+
 skinparam ConditionEndStyle hline
 
 title enroll_in_courses Step 6
-
-'!define SHOW_CODE_MIN
-'!define SHOW_CODE_MAX
 
 : 86;
 !ifdef SHOW_CODE_MAX
