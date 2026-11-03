@@ -116,26 +116,33 @@ def enroll_in_courses(student: Student, courses: list[Course], max_skipped: int,
                     should_return = True
             i += 1
 
-    schedule = student.get_schedule()
-
     courses_with_not_enough_credits = 0
 
     approved_courses = []
 
     if not should_return:
+        schedule = student.get_schedule()
+
         adjusted_remaining_credits = student.get_available_credits()
 
-        while len(courses) > 0:
-            if adjusted_remaining_credits > 0:
-                course = courses.pop()
+        _need_stop = False
 
-                if course.student_has_all_requirements(student):
-                    if schedule.is_space_available_for_course(course):
-                        adjusted_remaining_credits -= course.get_num_credits()
-                        approved_courses.append(course)
-                        courses_with_not_enough_credits = 0
+        while not _need_stop:
+            if len(courses) > 0:
+                if adjusted_remaining_credits > 0:
+
+                    course = courses.pop()
+
+                    if course.student_has_all_requirements(student):
+                        if schedule.is_space_available_for_course(course):
+                            adjusted_remaining_credits -= course.get_num_credits()
+                            approved_courses.append(course)
+                            courses_with_not_enough_credits = 0
+
+                else:
+                    _need_stop = True
             else:
-                courses = []
+                _need_stop = True
 
         i = 0
         while i < len(approved_courses):
@@ -144,3 +151,18 @@ def enroll_in_courses(student: Student, courses: list[Course], max_skipped: int,
             i += 1
 
     return approved_courses
+
+
+'''
+We guarantee that the loop continues as long as the length of [courses] is positive AND [adjusted_remaining_credits] is positive.
+
+This means the loop ends when EITHER [courses] is zero, OR [adjusted_remaining_credits] is zero or negative.
+
+In other words, there are three situations in which this expression can terminate:
+1. [courses] is zero;
+2. [adjusted_remaining_credits] is zero or negative;
+3. [courses] is zero, AND [adjusted_remaining_credits] is zero or negative
+
+The implementation was correct for options 1 and 3, when [courses] is zero, but for option 2, [courses] was manually set to zero, which is obviously not what is expected
+
+'''

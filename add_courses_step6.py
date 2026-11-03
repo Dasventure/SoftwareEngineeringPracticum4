@@ -103,13 +103,13 @@ def enroll_in_courses(student: Student, courses: list[Course], max_skipped: int,
                 should_return = True
         i += 1
 
-    schedule = student.get_schedule()
-
     courses_with_not_enough_credits = 0
 
     approved_courses = []
 
     if not should_return:
+        schedule = student.get_schedule()
+
         adjusted_remaining_credits = student.get_available_credits()
 
         while len(courses) > 0 and adjusted_remaining_credits > 0:
@@ -128,3 +128,18 @@ def enroll_in_courses(student: Student, courses: list[Course], max_skipped: int,
             i += 1
 
     return approved_courses
+
+'''
+
+An extra call to get_schedule().
+When a course cannot be added, the original function immediately exits via return [] on line 96. It never reaches student.get_schedule().
+
+In steps 6 and 7, in this case, should_return is simply set to True, and the loop terminates. 
+
+If `get_schedule()` is a pure getter with no side effects, the difference is imperceptible. BUT, strictly speaking, they are not equivalent.
+
+The difference becomes apparent in two cases:
+1. in a test with a mock, for example, `student.get_schedule.assert_not_called()` on a path with an error;
+2. if `get_schedule()` throws an exception: the original will return `[]`, and steps 6 and 7 will fail;
+
+'''

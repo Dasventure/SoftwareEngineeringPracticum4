@@ -1,0 +1,240 @@
+@startuml step_7
+start
+!ifndef STEP_7
+!define STEP_7
+
+skinparam ConditionEndStyle hline
+
+title enroll_in_courses Step 7
+
+'!define SHOW_CODE_MIN
+'!define SHOW_CODE_MAX
+
+: 86;
+!ifdef SHOW_CODE_MAX
+note right: should_return = False
+!endif
+
+if (88) then (True)
+    !ifdef SHOW_CODE_MIN
+    note right: if student.has_paid_tuition():
+    !endif
+    : 89;
+    !ifdef SHOW_CODE_MAX
+    note right: finance_ok = True
+    !endif
+else (False)
+
+    if (91) then (True)
+        !ifdef SHOW_CODE_MIN
+        note right: if student.has_financial_aid():
+        !endif
+        : 92;
+        !ifdef SHOW_CODE_MAX
+        note right: finance_ok = True
+        !endif
+    else (False)
+        : 94;
+        !ifdef SHOW_CODE_MAX
+        note right: finance_ok = False
+        !endif
+    endif
+endif
+
+: 96;
+!ifdef SHOW_CODE_MAX
+note right: i = 0
+!endif
+
+!ifdef SHOW_CODE_MIN
+while (97) is (while i < len(courses):)
+!endif
+!ifndef SHOW_CODE_MIN
+while (97)
+!endif
+
+    if (98) then (True)
+        !ifdef SHOW_CODE_MIN
+        note right: if should_return:
+        !endif
+        : 99;
+        !ifdef SHOW_CODE_MAX
+        note right: i = len(courses)
+        !endif
+    else (False)
+        : 101;
+        !ifdef SHOW_CODE_MAX
+        note right: course = courses[i]
+        !endif
+
+        if (102) then (True)
+            !ifdef SHOW_CODE_MIN
+            note right: if course.get_enrollment_starting_date() <= get_current_date():
+            !endif
+
+            if (103) then (True)
+                !ifdef SHOW_CODE_MIN
+                note right: if finance_ok:
+                !endif
+                : 104;
+                !ifdef SHOW_CODE_MAX
+                note right: print("Adding course")
+                !endif
+            else (False)
+
+                if (106) then (True)
+                    !ifdef SHOW_CODE_MIN
+                    note right: if course.is_informational_course():
+                    !endif
+                    : 107;
+                    !ifdef SHOW_CODE_MAX
+                    note right: print("Adding course")
+                    !endif
+                else (False)
+                    : 109 - 110;
+                    !ifdef SHOW_CODE_MAX
+                    note right
+                    log_error(f"Cannot add course {student.get_student_nr()} for student {course.get_course_id()}")
+                    should_return = True
+                    end note
+                    !endif
+                endif
+            endif
+        else (False)
+
+            if (112) then (True)
+                !ifdef SHOW_CODE_MIN
+                note right: if course.is_informational_course():
+                !endif
+                : 113;
+                !ifdef SHOW_CODE_MAX
+                note right: print("Adding course")
+                !endif
+            else (False)
+                : 115 - 116;
+                !ifdef SHOW_CODE_MAX
+                note right
+                log_error(f"Cannot add course {student.get_student_nr()} for student {course.get_course_id()}")
+                should_return = True
+                end note
+                !endif
+            endif
+        endif
+
+        : 117;
+        !ifdef SHOW_CODE_MAX
+        note right: i += 1
+        !endif
+    endif
+endwhile
+
+
+
+: 119 - 121;
+!ifdef SHOW_CODE_MAX
+note right
+courses_with_not_enough_credits = 0
+approved_courses = []
+end note
+!endif
+
+if (123) then (True)
+    !ifdef SHOW_CODE_MIN
+    note right: if not should_return:
+    !endif
+
+    : 124 - 128;
+    !ifdef SHOW_CODE_MAX
+    note right
+        schedule = student.get_schedule()
+        adjusted_remaining_credits = student.get_available_credits()
+        _need_stop = False
+    end note
+    !endif
+
+    !ifdef SHOW_CODE_MIN
+    while (130) is (while not _need_stop:)
+    !endif
+    !ifndef SHOW_CODE_MIN
+    while (130)
+    !endif
+
+        if (131) then (True)
+            !ifdef SHOW_CODE_MIN
+            note right: if len(courses) > 0:
+            !endif
+
+            if (132) then (True)
+                !ifdef SHOW_CODE_MIN
+                note right: if adjusted_remaining_credits > 0:
+                !endif
+
+                : 134;
+                !ifdef SHOW_CODE_MAX
+                note right: course = courses.pop()
+                !endif
+
+                if (136) then (True)
+                    !ifdef SHOW_CODE_MIN
+                    note right: if course.student_has_all_requirements(student):
+                    !endif
+
+                    if (137) then (True)
+                        !ifdef SHOW_CODE_MIN
+                        note right: if schedule.is_space_available_for_course(course):
+                        !endif
+
+                        : 138 - 140;
+                        !ifdef SHOW_CODE_MAX
+                        note right
+                            adjusted_remaining_credits -= course.get_num_credits()
+                            approved_courses.append(course)
+                            courses_with_not_enough_credits = 0
+                        end note
+                        !endif
+
+                    else (False)
+                    endif
+                else (False)
+                endif
+            else (False)
+                : 143;
+                !ifdef SHOW_CODE_MAX
+                note right: _need_stop = True
+                !endif
+            endif
+        else (False)
+            : 145;
+            !ifdef SHOW_CODE_MAX
+            note right: _need_stop = True
+            !endif
+        endif
+    endwhile
+
+    : 147;
+    !ifdef SHOW_CODE_MAX
+    note right: i = 0
+    !endif
+
+    !ifdef SHOW_CODE_MIN
+    while (148) is (while i < len(approved_courses):)
+    !endif
+    !ifndef SHOW_CODE_MIN
+    while (148)
+    !endif
+
+        : 149 - 151;
+        !ifdef SHOW_CODE_MAX
+        note right
+            approved_course = approved_courses[i]
+            schedule.add_course(approved_course)
+            i += 1
+        end note
+        !endif
+    endwhile
+endif
+
+
+!endif
+stop
+@enduml
