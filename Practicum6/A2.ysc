@@ -8,6 +8,7 @@
       <vertices xsi:type="sgraph:State" xmi:id="_D5lCQN9hEfGwgPHZR0ocmA" name="SmartUniversity" incomingTransitions="_smPpMN9hEfGwgPHZR0ocmA">
         <regions xmi:id="_D5lpUt9hEfGwgPHZR0ocmA" name="Website">
           <vertices xsi:type="sgraph:State" xmi:id="_LF3CwN9hEfGwgPHZR0ocmA" name="LoggedIn" incomingTransitions="_BvGSQN9iEfGwgPHZR0ocmA">
+            <outgoingTransitions xmi:id="_16cmQOETEfGambVatSVs5A" specification="after 20 s" target="_VFq60N9hEfGwgPHZR0ocmA"/>
             <regions xmi:id="_LF3Cw99hEfGwgPHZR0ocmA" name="Webpage">
               <vertices xsi:type="sgraph:Entry" xmi:id="_TBANAN9kEfGwgPHZR0ocmA">
                 <outgoingTransitions xmi:id="_WNzgMN9kEfGwgPHZR0ocmA" specification="" target="_T_wUQN9kEfGwgPHZR0ocmA"/>
@@ -62,7 +63,7 @@
               </vertices>
             </regions>
           </vertices>
-          <vertices xsi:type="sgraph:State" xmi:id="_VFq60N9hEfGwgPHZR0ocmA" specification="entry /&#xA;raise Website.LoggedOut&#xA;" name="Login" incomingTransitions="_qKmtMN9hEfGwgPHZR0ocmA _idtLkN9kEfGwgPHZR0ocmA">
+          <vertices xsi:type="sgraph:State" xmi:id="_VFq60N9hEfGwgPHZR0ocmA" specification="entry /&#xA;raise Website.LoggedOut&#xA;" name="LoggedOut" incomingTransitions="_qKmtMN9hEfGwgPHZR0ocmA _idtLkN9kEfGwgPHZR0ocmA _16cmQOETEfGambVatSVs5A">
             <outgoingTransitions xmi:id="_BvGSQN9iEfGwgPHZR0ocmA" specification="Website.LoginSuccess" target="_LF3CwN9hEfGwgPHZR0ocmA"/>
             <outgoingTransitions xmi:id="_idtLkN9kEfGwgPHZR0ocmA" specification="Website.LoginFail&#xA;" target="_VFq60N9hEfGwgPHZR0ocmA"/>
           </vertices>
@@ -702,6 +703,17 @@
       <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_BYwucuApEfGjmpjh5YlsQQ" points="[-2, 128, -329, 258]$[312, 128, -15, 258]$[312, -113, -15, 17]"/>
       <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_BYzKsOApEfGjmpjh5YlsQQ" id="(0.001221001221001221,0.4187256176853056)"/>
       <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_BYzKseApEfGjmpjh5YlsQQ" id="(0.3444976076555024,0.782051282051282)"/>
+    </edges>
+    <edges xmi:id="_16fpkOETEfGambVatSVs5A" type="Transition" element="_16cmQOETEfGambVatSVs5A" source="_LF3p0N9hEfGwgPHZR0ocmA" target="_VFrh4N9hEfGwgPHZR0ocmA">
+      <children xsi:type="notation:DecorationNode" xmi:id="_16gQoeETEfGambVatSVs5A" type="TransitionExpression">
+        <styles xsi:type="notation:ShapeStyle" xmi:id="_16gQouETEfGambVatSVs5A"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_16gQo-ETEfGambVatSVs5A" y="10"/>
+      </children>
+      <styles xsi:type="notation:ConnectorStyle" xmi:id="_16fpkeETEfGambVatSVs5A" routing="Rectilinear" lineColor="4210752"/>
+      <styles xsi:type="notation:FontStyle" xmi:id="_16gQoOETEfGambVatSVs5A" fontName="Verdana"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_16fpkuETEfGambVatSVs5A" points="[-75, 16, 260, -56]$[-334, 66, 1, -6]"/>
+      <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_16jT8OETEfGambVatSVs5A" id="(0.05323383084577114,0.00450112528132033)"/>
+      <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_16jT8eETEfGambVatSVs5A" id="(0.3269230769230769,0.058823529411764705)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>
