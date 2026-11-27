@@ -59,7 +59,12 @@ ignore=CVS
 # ignore-list. The regex matches against paths and can be in Posix or Windows
 # format. Because '\\' represents the directory delimiter on Windows systems,
 # it can't be used as an escape character.
-ignore-paths=
+
+# CHANGED: review guidelines (B) - ignore legacy utils package, the bought
+# external src.network package and the work-in-progress signup_form module.
+ignore-paths=.*[\\/]?src[\\/]utils([\\/].*)?$,
+             .*[\\/]?src[\\/]network([\\/].*)?$,
+             .*[\\/]?src[\\/]user_registration[\\/]signup_form.*
 
 # Files or directories matching the regular expression patterns are skipped.
 # The regex matches against base names, not paths. The default value ignores
@@ -89,7 +94,13 @@ limit-inference-results=100
 
 # List of plugins (as comma separated values of python module names) to load,
 # usually to register additional checkers.
-load-plugins=
+
+# CHANGED: pylint_json2html adds the 'jsonextended' reporter (messages +
+# statistics) that can be converted to a readable HTML report.
+# docparams: checks that raised exceptions are documented ("exceptions should be checked").
+load-plugins=pylint_json2html,
+             pylint.extensions.docparams,
+             pylint.extensions.typing
 
 # Pickle collected data for later comparisons.
 persistent=yes
@@ -100,7 +111,9 @@ prefer-stubs=no
 
 # Minimum Python version to use for version dependent checks. Will default to
 # the version used to run pylint.
-py-version=3.14
+
+# CHANGED: guidelines require Python 3.10
+py-version=3.10
 
 # Discover python modules and packages in the file system subtree.
 recursive=no
@@ -459,14 +472,30 @@ disable=raw-checker-failed,
         deprecated-pragma,
         use-symbolic-message-instead,
         use-implicit-booleaness-not-comparison-to-string,
-        use-implicit-booleaness-not-comparison-to-zero
+        use-implicit-booleaness-not-comparison-to-zero,
+
+        # CHANGED: old code is employed - deprecated methods must not be reported
+        deprecated-method,
+
+        # CHANGED: raising integers as an exception must be ignored
+        raising-bad-type
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
 # multiple time (only on the command line, not in the configuration file where
 # it should appear only once). See also the "--disable" option for examples.
-enable=
 
+# CHANGED: explicitly enable checks required by the guidelines, so that they
+# stay on even if defaults change: TODO/FIXME listing, code duplication,
+# exception checks.
+enable=fixme,
+       duplicate-code,
+       broad-exception-caught,
+       broad-exception-raised,
+       bad-except-order,
+       try-except-raise,
+       raise-missing-from,
+       missing-raises-doc
 
 [METHOD_ARGS]
 
@@ -481,6 +510,8 @@ timeout-methods=requests.api.delete,requests.api.get,requests.api.head,requests.
 check-fixme-in-docstring=no
 
 # List of note tags to take in consideration, separated by a comma.
+
+# CHANGED (verified): all TODO and FIXME notes must be listed
 notes=FIXME,
       XXX,
       TODO
@@ -523,10 +554,15 @@ msg-template=
 # 'colorized', 'json2' (improved json format), 'json' (old json format), 'msvs'
 # (visual studio), 'github' (GitHub actions) and 'junit' (JUnit XML). You can
 # also give a reporter class, e.g. mypackage.mymodule.MyReporterClass.
-#output-format=
+
+# CHANGED: machine-friendly JSON (with statistics) written to a file and
+# human-friendly text on the console. HTML is generated from the JSON.
+output-format=jsonextended:reports/pylint_report.json,text:reports/pylint_report.txt,colorized
 
 # Tells whether to display a full report or only the messages.
-reports=no
+
+# CHANGED: full report (statistics, dependencies, duplication tables)
+reports=yes
 
 # Activate the evaluation score.
 score=yes
@@ -535,10 +571,14 @@ score=yes
 [SIMILARITIES]
 
 # Comments are removed from the similarity computation
-ignore-comments=yes
+
+# CHANGED: detect more similarities (reduce code duplication)
+ignore-comments=no
 
 # Docstrings are removed from the similarity computation
-ignore-docstrings=yes
+
+# CHANGED: duplicated import blocks also count
+ignore-docstrings=no
 
 # Imports are removed from the similarity computation
 ignore-imports=yes
@@ -548,7 +588,9 @@ ignore-signatures=yes
 
 # Minimum lines number of a similarity. Setting it to 0 will disable the check,
 # but you should use disable=duplicate-code instead.
-min-similarity-lines=4
+
+# CHANGED: lower threshold so smaller duplicated blocks are found
+min-similarity-lines=3
 
 
 [SPELLING]
