@@ -1,0 +1,251 @@
+************* Module src.user
+src/user.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+src/user.py:5:0: E0401: Unable to import 'src.network' (import-error)
+src/user.py:5:0: E0611: No name 'network' in module 'src' (no-name-in-module)
+src/user.py:11:0: C0115: Missing class docstring (missing-class-docstring)
+src/user.py:25:15: W3601: Suspicious 2-part chained comparison using semantically incompatible operators ('>' and 'is not') (bad-chained-comparison)
+src/user.py:40:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/user.py:44:0: W0223: Method 'register' is abstract in class 'User' but is not overridden in child class 'Student' (abstract-method)
+src/user.py:48:63: W0621: Redefining name 'user' from outer scope (line 92) (redefined-outer-name)
+src/user.py:49:15: C0123: Use isinstance() rather than type() for a typecheck. (unidiomatic-typecheck)
+src/user.py:53:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/user.py:55:8: W0101: Unreachable code (unreachable)
+src/user.py:63:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/user.py:64:8: W0201: Attribute 'degree' defined outside __init__ (attribute-defined-outside-init)
+src/user.py:67:0: W0223: Method 'register' is abstract in class 'User' but is not overridden in child class 'Admin' (abstract-method)
+src/user.py:69:23: W0621: Redefining name 'user' from outer scope (line 92) (redefined-outer-name)
+src/user.py:70:15: C0123: Use isinstance() rather than type() for a typecheck. (unidiomatic-typecheck)
+src/user.py:80:0: C0116: Missing function or method docstring (missing-function-docstring)
+src/user.py:80:41: C0103: Argument name "userMan" doesn't conform to snake_case naming style (invalid-name)
+src/user.py:81:4: W0621: Redefining name 'user' from outer scope (line 92) (redefined-outer-name)
+src/user.py:81:11: E0110: Abstract class 'User' with abstract methods instantiated (abstract-class-instantiated)
+src/user.py:84:14: E0110: Abstract class 'Student' with abstract methods instantiated (abstract-class-instantiated)
+src/user.py:92:11: E0110: Abstract class 'User' with abstract methods instantiated (abstract-class-instantiated)
+************* Module src.special_facilities
+src/special_facilities.py:77:0: C0305: Trailing newlines (trailing-newlines)
+src/special_facilities.py:61:5: W0511: FIXME: fix (fixme)
+src/special_facilities.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+src/special_facilities.py:6:0: W0622: Redefining built-in 'pow' (redefined-builtin)
+src/special_facilities.py:6:0: W0401: Wildcard import math (wildcard-import)
+src/special_facilities.py:9:0: C0115: Missing class docstring (missing-class-docstring)
+src/special_facilities.py:18:0: C0115: Missing class docstring (missing-class-docstring)
+src/special_facilities.py:19:23: C0103: Argument name "enumType" doesn't conform to snake_case naming style (invalid-name)
+src/special_facilities.py:20:15: C0121: Comparison 'self.type != None' should be 'self.type is not None' (singleton-comparison)
+src/special_facilities.py:23:4: E0211: Method 'get_type' has no argument (no-method-argument)
+src/special_facilities.py:27:15: E0602: Undefined variable 'self' (undefined-variable)
+src/special_facilities.py:35:4: E0307: __str__ does not return str (invalid-str-returned)
+src/special_facilities.py:20:15: E0203: Access to member 'type' before its definition line 21 (access-member-before-definition)
+src/special_facilities.py:39:0: W9015: "manager" missing in parameter documentation (missing-param-doc)
+src/special_facilities.py:65:13: E1101: Class 'EnumSpecialFacilties' has no 'GROOTLETTERTYPE' member; maybe 'GROOT_LETTERTYPE'? (no-member)
+src/special_facilities.py:69:13: E1101: Class 'EnumSpecialFacilties' has no 'RUITJESPAPIER' member (no-member)
+src/special_facilities.py:71:13: E1101: Class 'EnumSpecialFacilties' has no 'VOORLEES_SOFTWARE' member (no-member)
+src/special_facilities.py:4:0: C0411: standard import "enum.Enum" should be placed before first party import "src.user_registration.manager.UserManager"  (wrong-import-order)
+src/special_facilities.py:6:0: C0411: standard import "math.*" should be placed before first party import "src.user_registration.manager.UserManager"  (wrong-import-order)
+src/special_facilities.py:6:0: W0614: Unused import(s) acos, acosh, asin, asinh, atan, atan2, atanh, cbrt, ceil, comb, copysign, cos, cosh, degrees, dist, e, erf, erfc, exp, exp2, expm1, fabs, factorial, floor, fma, fmod, frexp, fsum, gamma, gcd, hypot, inf, isclose, isfinite, isinf, isnan, isqrt, lcm, ldexp, lgamma, log, log10, log1p, log2, modf, nan, nextafter, perm, pi, pow, prod, radians, remainder, sin, sinh, sqrt, sumprod, tan, tanh, tau, trunc and ulp from wildcard import of math (unused-wildcard-import)
+************* Module src.user_registration.manager
+src/user_registration/manager.py:47:0: C0305: Trailing newlines (trailing-newlines)
+src/user_registration/manager.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+src/user_registration/manager.py:13:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/user_registration/manager.py:13:4: E0213: Method 'get_user' should have "self" as first argument (no-self-argument)
+src/user_registration/manager.py:14:20: E0602: Undefined variable 'self' (undefined-variable)
+src/user_registration/manager.py:13:4: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+src/user_registration/manager.py:18:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/user_registration/manager.py:18:36: C0103: Argument name "userName" doesn't conform to snake_case naming style (invalid-name)
+src/user_registration/manager.py:19:8: E1121: Too many positional arguments for method call (too-many-function-args)
+src/user_registration/manager.py:22:4: C0116: Missing function or method docstring (missing-function-docstring)
+src/user_registration/manager.py:27:0: C0116: Missing function or method docstring (missing-function-docstring)
+src/user_registration/manager.py:27:41: C0103: Argument name "userMan" doesn't conform to snake_case naming style (invalid-name)
+src/user_registration/manager.py:39:11: E0701: Bad except clauses order (Exception is an ancestor class of UserRegistrationException) (bad-except-order)
+src/user_registration/manager.py:42:11: E0701: Bad except clauses order (Exception is an ancestor class of ValueError) (bad-except-order)
+src/user_registration/manager.py:29:15: E0110: Abstract class 'User' with abstract methods instantiated (abstract-class-instantiated)
+src/user_registration/manager.py:32:18: E0110: Abstract class 'Student' with abstract methods instantiated (abstract-class-instantiated)
+src/user_registration/manager.py:38:8: W0707: Consider explicitly re-raising using 'except Exception as exc' and 'raise 3 from exc' (raise-missing-from)
+src/user_registration/manager.py:41:8: W0707: Consider explicitly re-raising using 'except UserRegistrationException as exc' and 'raise 2 from exc' (raise-missing-from)
+src/user_registration/manager.py:44:8: W0707: Consider explicitly re-raising using 'except ValueError as exc' and 'raise 1 from exc' (raise-missing-from)
+src/user_registration/manager.py:3:0: C0411: standard import "logging.warn" should be placed before first party imports "src.user.User", "src.user_registration.signup_form.SignupForm"  (wrong-import-order)
+src/user_registration/manager.py:1:0: R0801: Similar lines in 2 files
+==src.user:[80:86]
+==src.user_registration.manager:[28:34]
+    user = User(first_name=form_data.get_name().split(" ")[0],
+                last_name=form_data.get_name().split(" ")[1],
+                dob=form_data.get_dob())
+    student = Student(facilities=[], user=user)
+    student.set_program(form_data.get_degree())
+ (duplicate-code)
+src/user_registration/manager.py:1:0: R0401: Cyclic import (src.user -> src.user_registration.manager) (cyclic-import)
+src/user_registration/manager.py:1:0: R0401: Cyclic import (src.special_facilities -> src.user_registration.manager -> src.user) (cyclic-import)
+
+
+Report
+======
+108 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |5      |NC         |NC         |40.00       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |7      |NC         |NC         |57.14       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|method   |18     |NC         |NC         |66.67       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+|function |4      |NC         |NC         |50.00       |0.00     |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+External dependencies
+---------------------
+::
+
+    src 
+      \-user (src.user_registration.manager)
+
+
+
+227 lines have been analyzed
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |125    |55.07 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|docstring |43     |18.94 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|comment   |5      |2.20  |NC       |NC         |
++----------+-------+------+---------+-----------+
+|empty     |54     |23.79 |NC       |NC         |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+------+---------+-----------+
+|                         |now   |previous |difference |
++=========================+======+=========+===========+
+|nb duplicated lines      |0     |NC       |NC         |
++-------------------------+------+---------+-----------+
+|percent duplicated lines |0.000 |NC       |NC         |
++-------------------------+------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |26     |NC       |NC         |
++-----------+-------+---------+-----------+
+|refactor   |4      |NC       |NC         |
++-----------+-------+---------+-----------+
+|warning    |16     |NC       |NC         |
++-----------+-------+---------+-----------+
+|error      |19     |NC       |NC         |
++-----------+-------+---------+-----------+
+
+
+
+% errors / warnings by module
+-----------------------------
+
++------------------------------+------+--------+---------+-----------+
+|module                        |error |warning |refactor |convention |
++==============================+======+========+=========+===========+
+|src.special_facilities        |36.84 |31.25   |0.00     |30.77      |
++------------------------------+------+--------+---------+-----------+
+|src.user_registration.manager |36.84 |18.75   |100.00   |34.62      |
++------------------------------+------+--------+---------+-----------+
+|src.user                      |26.32 |50.00   |0.00     |34.62      |
++------------------------------+------+--------+---------+-----------+
+
+
+
+Messages
+--------
+
++--------------------------------+------------+
+|message id                      |occurrences |
++================================+============+
+|missing-function-docstring      |8           |
++--------------------------------+------------+
+|abstract-class-instantiated     |5           |
++--------------------------------+------------+
+|invalid-name                    |4           |
++--------------------------------+------------+
+|wrong-import-order              |3           |
++--------------------------------+------------+
+|redefined-outer-name            |3           |
++--------------------------------+------------+
+|raise-missing-from              |3           |
++--------------------------------+------------+
+|no-member                       |3           |
++--------------------------------+------------+
+|missing-module-docstring        |3           |
++--------------------------------+------------+
+|missing-class-docstring         |3           |
++--------------------------------+------------+
+|unidiomatic-typecheck           |2           |
++--------------------------------+------------+
+|undefined-variable              |2           |
++--------------------------------+------------+
+|trailing-newlines               |2           |
++--------------------------------+------------+
+|cyclic-import                   |2           |
++--------------------------------+------------+
+|bad-except-order                |2           |
++--------------------------------+------------+
+|abstract-method                 |2           |
++--------------------------------+------------+
+|wildcard-import                 |1           |
++--------------------------------+------------+
+|unused-wildcard-import          |1           |
++--------------------------------+------------+
+|unreachable                     |1           |
++--------------------------------+------------+
+|too-many-function-args          |1           |
++--------------------------------+------------+
+|singleton-comparison            |1           |
++--------------------------------+------------+
+|redefined-builtin               |1           |
++--------------------------------+------------+
+|no-self-argument                |1           |
++--------------------------------+------------+
+|no-name-in-module               |1           |
++--------------------------------+------------+
+|no-method-argument              |1           |
++--------------------------------+------------+
+|missing-param-doc               |1           |
++--------------------------------+------------+
+|invalid-str-returned            |1           |
++--------------------------------+------------+
+|inconsistent-return-statements  |1           |
++--------------------------------+------------+
+|import-error                    |1           |
++--------------------------------+------------+
+|fixme                           |1           |
++--------------------------------+------------+
+|duplicate-code                  |1           |
++--------------------------------+------------+
+|bad-chained-comparison          |1           |
++--------------------------------+------------+
+|attribute-defined-outside-init  |1           |
++--------------------------------+------------+
+|access-member-before-definition |1           |
++--------------------------------+------------+
+
+
+
+
+-----------------------------------
+Your code has been rated at 0.00/10
+
