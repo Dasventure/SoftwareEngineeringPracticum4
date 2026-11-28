@@ -1,0 +1,315 @@
+src/user_registration/signup_form.py:2:1:2:1: error: Cannot find implementation
+or library stub for module named "form_utils"  [import-not-found]
+    from form_utils import form_sanitiser
+    ^
+src/user_registration/signup_form.py:2:1:2:1: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+src/user_registration/signup_form.py:2:1:2:1: note: See https://mypy.rtfd.io/en/stable/_refs.html#code-import-not-found for more info
+src/user_registration/signup_form.py: note: In member "fill" of class "SignupForm":
+src/user_registration/signup_form.py:8:5:9:12: error: Function is missing a
+return type annotation  [no-untyped-def]
+        def fill(self):
+        ^~~~~~~~~~~~~~~
+src/user_registration/signup_form.py:8:5:9:12: note: Use "-> None" if function does not return a value
+src/user_registration/signup_form.py:8:5:9:12: note: See https://mypy.rtfd.io/en/stable/_refs.html#code-no-untyped-def for more info
+src/user_registration/signup_form.py: note: In member "get_name" of class "SignupForm":
+src/user_registration/signup_form.py:11:5:12:24: error: Function is missing a
+return type annotation  [no-untyped-def]
+        def get_name(self):
+        ^~~~~~~~~~~~~~~~~~~
+src/user_registration/signup_form.py:12:16:12:24: error: "SignupForm" has no
+attribute "name"  [attr-defined]
+            return self.name
+                   ^~~~~~~~~
+src/user_registration/signup_form.py: note: In member "get_dob" of class "SignupForm":
+src/user_registration/signup_form.py:14:5:15:23: error: Function is missing a
+return type annotation  [no-untyped-def]
+        def get_dob(self):
+        ^~~~~~~~~~~~~~~~~~
+src/user_registration/signup_form.py:15:16:15:23: error: "SignupForm" has no
+attribute "dob"  [attr-defined]
+            return self.dob
+                   ^~~~~~~~
+src/user_registration/signup_form.py: note: In member "get_degree" of class "SignupForm":
+src/user_registration/signup_form.py:17:5:18:26: error: Function is missing a
+return type annotation  [no-untyped-def]
+        def get_degree(self):
+        ^~~~~~~~~~~~~~~~~~~~~
+src/user_registration/signup_form.py:18:16:18:26: error: "SignupForm" has no
+attribute "degree"  [attr-defined]
+            return self.degree
+                   ^~~~~~~~~~~
+src/utils/math.py: note: In function "sqrt":
+src/utils/math.py:4:1:5:25: error: Function is missing a type annotation 
+[no-untyped-def]
+    def sqrt(num):
+    ^~~~~~~~~~~~~~
+src/utils/math.py: note: In function "sum_list":
+src/utils/math.py:8:1:26:14: error: Function is missing a return type
+annotation  [no-untyped-def]
+    def sum_list(numbers: list):
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/utils/math.py:8:23:8:26: error: Missing type arguments for generic type
+"list"  [type-arg]
+    def sum_list(numbers: list):
+                          ^~~~
+src/utils/math.py:8:23:8:26: note: See https://mypy.rtfd.io/en/stable/_refs.html#code-type-arg for more info
+src/utils/math.py: note: In function "max":
+src/utils/math.py:29:1:35:14: error: Function is missing a type annotation 
+[no-untyped-def]
+    def max(numbers):
+    ^~~~~~~~~~~~~~~~~
+src/utils/math.py: note: In function "is_positive_greater_than_five":
+src/utils/math.py:38:1:39:21: error: Function is missing a type annotation 
+[no-untyped-def]
+    def is_positive_greater_than_five(x):
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/utils/file.py: note: In function "read_file":
+src/utils/file.py:6:1:11:29: error: Function is missing a return type
+annotation  [no-untyped-def]
+    def read_file(file_name: Path):
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/utils/file.py: note: In function "write_file":
+src/utils/file.py:14:1:19:32: error: Function is missing a return type
+annotation  [no-untyped-def]
+    def write_file(fileName: Path, contents):
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/utils/file.py:14:1:19:32: error: Function is missing a type annotation for
+one or more parameters  [no-untyped-def]
+    def write_file(fileName: Path, contents):
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/utils/file.py: note: In function "write_json_file":
+src/utils/file.py:22:1:23:42: error: Function is missing a return type
+annotation  [no-untyped-def]
+    def write_json_file(filename: str, data: list):
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/utils/file.py:22:42:22:45: error: Missing type arguments for generic type
+"list"  [type-arg]
+    def write_json_file(filename: str, data: list):
+                                             ^~~~
+src/utils/file.py:23:16:23:35: error: Argument 1 to "write_file" has
+incompatible type "str"; expected "Path"  [arg-type]
+        write_file(json.dumps(obj=data), data)
+                   ^~~~~~~~~~~~~~~~~~~~
+src/utils/file.py: note: In function "read_file_json":
+src/utils/file.py:25:1:26:44: error: Function is missing a return type
+annotation  [no-untyped-def]
+    def read_file_json(filename: str):
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/utils/file.py:26:35:26:42: error: Argument 1 to "read_file" has
+incompatible type "str"; expected "Path"  [arg-type]
+        return json.loads(s=read_file(filename))
+                                      ^~~~~~~~
+src/user.py:5:1:5:1: error: Cannot find implementation or library stub for
+module named "src.network"  [import-not-found]
+    from src.network import get_user_ref
+    ^
+src/user.py: note: In member "register" of class "User":
+src/user.py:40:5:41:35: error: Function is missing a return type annotation 
+[no-untyped-def]
+        def register(self):
+        ^~~~~~~~~~~~~~~~~~~
+src/user.py:40:5:41:35: note: Use "-> None" if function does not return a value
+src/user.py: note: In member "__init__" of class "Student":
+src/user.py:50:26:50:40: error: Argument 1 to "__init__" of "User" has
+incompatible type "tuple[str, str]"; expected "str"  [arg-type]
+            super().__init__(user.get_name(), None, user.get_dob())
+                             ^~~~~~~~~~~~~~~
+src/user.py:50:43:50:46: error: Argument 2 to "__init__" of "User" has
+incompatible type "None"; expected "str"  [arg-type]
+            super().__init__(user.get_name(), None, user.get_dob())
+                                              ^~~~
+src/user.py: note: In member "set_program" of class "Student":
+src/user.py:63:5:64:28: error: Function is missing a return type annotation 
+[no-untyped-def]
+        def set_program(self, degree: str):
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/user.py: note: In member "__init__" of class "Admin":
+src/user.py:71:26:71:40: error: Argument 1 to "__init__" of "User" has
+incompatible type "tuple[str, str]"; expected "str"  [arg-type]
+            super().__init__(user.get_name(), None, user.get_dob())
+                             ^~~~~~~~~~~~~~~
+src/user.py:71:43:71:46: error: Argument 2 to "__init__" of "User" has
+incompatible type "None"; expected "str"  [arg-type]
+            super().__init__(user.get_name(), None, user.get_dob())
+                                              ^~~~
+src/user.py: note: In function "register_user":
+src/user.py:80:1:88:42: error: Function is missing a return type annotation 
+[no-untyped-def]
+    def register_user(form_data: SignupForm, userMan: UserManager):
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/user.py:81:12:83:40: error: Cannot instantiate abstract class "User" with
+abstract attribute "register"  [abstract]
+        user = User(first_name=form_data.get_name().split(" ")[0],
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/user.py:81:28:81:47: error: Call to untyped function "get_name" in typed
+context  [no-untyped-call]
+        user = User(first_name=form_data.get_name().split(" ")[0],
+                               ^~~~~~~~~~~~~~~~~~~~
+src/user.py:82:27:82:46: error: Call to untyped function "get_name" in typed
+context  [no-untyped-call]
+                    last_name=form_data.get_name().split(" ")[1],
+                              ^~~~~~~~~~~~~~~~~~~~
+src/user.py:83:21:83:39: error: Call to untyped function "get_dob" in typed
+context  [no-untyped-call]
+                    dob=form_data.get_dob())
+                        ^~~~~~~~~~~~~~~~~~~
+src/user.py:84:15:84:47: error: Cannot instantiate abstract class "Student"
+with abstract attribute "register"  [abstract]
+        student = Student(facilities=[], user=user)
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/user.py:85:25:85:46: error: Call to untyped function "get_degree" in typed
+context  [no-untyped-call]
+        student.set_program(form_data.get_degree())
+                            ^~~~~~~~~~~~~~~~~~~~~~
+src/user.py:88:9:88:42: error: Call to untyped function "add_student" in typed
+context  [no-untyped-call]
+            userMan.add_student(student, user)
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/user.py: note: At top level:
+src/user.py:92:12:92:65: error: Cannot instantiate abstract class "User" with
+abstract attribute "register"  [abstract]
+        user = User(first_name="Test", last_name="", dob=date(0,0,0))
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/user.py:92:12:92:65: note: See https://mypy.rtfd.io/en/stable/_refs.html#code-abstract for more info
+src/user.py:93:5:93:19: error: Call to untyped function "register" of "User" in
+typed context  [no-untyped-call]
+        user.register()
+        ^~~~~~~~~~~~~~~
+src/user.py:93:5:93:19: note: See https://mypy.rtfd.io/en/stable/_refs.html#code-no-untyped-call for more info
+src/special_facilities.py: note: In member "__init__" of class "Facility":
+src/special_facilities.py:20:16:20:24: error: Cannot determine type of "type" 
+[has-type]
+            assert self.type != None
+                   ^~~~~~~~~
+src/special_facilities.py:20:16:20:24: note: See https://mypy.rtfd.io/en/stable/_refs.html#code-has-type for more info
+src/special_facilities.py: note: In member "get_type" of class "Facility":
+src/special_facilities.py:23:5:27:24: error: Function is missing a return type
+annotation  [no-untyped-def]
+        def get_type():
+        ^~~~~~~~~~~~~~~
+src/special_facilities.py:27:16:27:19: error: Name "self" is not defined 
+[name-defined]
+            return self.type
+                   ^~~~
+src/special_facilities.py: note: In member "get_name" of class "Facility":
+src/special_facilities.py:29:5:33:55: error: Function is missing a return type
+annotation  [no-untyped-def]
+        def get_name(self):
+        ^~~~~~~~~~~~~~~~~~~
+src/special_facilities.py:33:51:33:54: error: Argument "special_facility" to
+"get_facility_name" has incompatible type "Facility"; expected
+"EnumSpecialFacilties"  [arg-type]
+            return get_facility_name(special_facility=self)
+                                                      ^~~~
+src/special_facilities.py: note: In member "__str__" of class "Facility":
+src/special_facilities.py:35:5:36:19: error: Function is missing a type
+annotation  [no-untyped-def]
+        def __str__(self):
+        ^~~~~~~~~~~~~~~~~~
+src/special_facilities.py: note: In function "get_special_facilities":
+src/special_facilities.py:52:12:52:36: error: Too many arguments for "get_user"
+of "UserManager"  [call-arg]
+        user = manager.get_user(user_id)
+               ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/special_facilities.py:52:12:52:36: note: See https://mypy.rtfd.io/en/stable/_refs.html#code-call-arg for more info
+src/special_facilities.py:54:12:54:34: error: Incompatible return value type
+(got "str", expected "int")  [return-value]
+        return str(user.facilities[0])
+               ^~~~~~~~~~~~~~~~~~~~~~~
+src/special_facilities.py:54:16:54:30: error: "User" has no attribute
+"facilities"  [attr-defined]
+        return str(user.facilities[0])
+                   ^~~~~~~~~~~~~~~
+src/special_facilities.py: note: In function "get_facility_name":
+src/special_facilities.py:57:1:72:38: error: Function is missing a return type
+annotation  [no-untyped-def]
+    def get_facility_name(special_facility: EnumSpecialFacilties):
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/special_facilities.py:65:14:65:49: error: "type[EnumSpecialFacilties]" has
+no attribute "GROOTLETTERTYPE"  [attr-defined]
+            case EnumSpecialFacilties.GROOTLETTERTYPE:
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/special_facilities.py:69:14:69:47: error: "type[EnumSpecialFacilties]" has
+no attribute "RUITJESPAPIER"  [attr-defined]
+            case EnumSpecialFacilties.RUITJESPAPIER:
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/special_facilities.py:71:14:71:51: error: "type[EnumSpecialFacilties]" has
+no attribute "VOORLEES_SOFTWARE"  [attr-defined]
+            case EnumSpecialFacilties.VOORLEES_SOFTWARE:
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/user_registration/manager.py: note: In member "__init__" of class "UserManager":
+src/user_registration/manager.py:9:5:11:26: error: Function is missing a return
+type annotation  [no-untyped-def]
+        def __init__(self):
+        ^~~~~~~~~~~~~~~~~~~
+src/user_registration/manager.py:9:5:11:26: note: Use "-> None" if function does not return a value
+src/user_registration/manager.py: note: In member "get_user" of class "UserManager":
+src/user_registration/manager.py:13:5:16:27: error: Missing return statement 
+[return]
+        def get_user(username: str) -> User:
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/user_registration/manager.py:13:5:16:27: note: See https://mypy.rtfd.io/en/stable/_refs.html#code-return for more info
+src/user_registration/manager.py:14:21:14:24: error: Name "self" is not defined
+ [name-defined]
+            for user in self.users:
+                        ^~~~
+src/user_registration/manager.py:16:17:16:27: error: Returning Any from
+function declared to return "User"  [no-any-return]
+                    return user
+                    ^~~~~~~~~~~
+src/user_registration/manager.py:16:17:16:27: note: See https://mypy.rtfd.io/en/stable/_refs.html#code-no-any-return for more info
+src/user_registration/manager.py: note: In member "edit_user" of class "UserManager":
+src/user_registration/manager.py:18:5:19:55: error: Function is missing a type
+annotation  [no-untyped-def]
+        def edit_user(self, facilities, userName):
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/user_registration/manager.py:19:9:19:31: error: Too many arguments for
+"get_user" of "UserManager"  [call-arg]
+            self.get_user(userName).facilities = facilities
+            ^~~~~~~~~~~~~~~~~~~~~~~
+src/user_registration/manager.py:19:9:19:42: error: "User" has no attribute
+"facilities"  [attr-defined]
+            self.get_user(userName).facilities = facilities
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/user_registration/manager.py: note: In member "add_student" of class "UserManager":
+src/user_registration/manager.py:22:5:24:31: error: Function is missing a type
+annotation  [no-untyped-def]
+        def add_student(self, user, student):
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/user_registration/manager.py: note: In function "register_user":
+src/user_registration/manager.py:27:1:44:15: error: Function is missing a
+return type annotation  [no-untyped-def]
+    def register_user(form_data: SignupForm, userMan: UserManager):
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/user_registration/manager.py:29:16:31:44: error: Cannot instantiate
+abstract class "User" with abstract attribute "register"  [abstract]
+            user = User(first_name=form_data.get_name().split(" ")[0],
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/user_registration/manager.py:29:32:29:51: error: Call to untyped function
+"get_name" in typed context  [no-untyped-call]
+            user = User(first_name=form_data.get_name().split(" ")[0],
+                                   ^~~~~~~~~~~~~~~~~~~~
+src/user_registration/manager.py:30:31:30:50: error: Call to untyped function
+"get_name" in typed context  [no-untyped-call]
+                        last_name=form_data.get_name().split(" ")[1],
+                                  ^~~~~~~~~~~~~~~~~~~~
+src/user_registration/manager.py:31:25:31:43: error: Call to untyped function
+"get_dob" in typed context  [no-untyped-call]
+                        dob=form_data.get_dob())
+                            ^~~~~~~~~~~~~~~~~~~
+src/user_registration/manager.py:32:19:32:51: error: Cannot instantiate
+abstract class "Student" with abstract attribute "register"  [abstract]
+            student = Student(facilities=[], user=user)
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/user_registration/manager.py:33:29:33:50: error: Call to untyped function
+"get_degree" in typed context  [no-untyped-call]
+            student.set_program(form_data.get_degree())
+                                ^~~~~~~~~~~~~~~~~~~~~~
+src/user_registration/manager.py:35:9:35:42: error: Call to untyped function
+"add_student" in typed context  [no-untyped-call]
+            userMan.add_student(student, user)
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Generated HTML report (via XSLT): /home/joachimverleysen/Downloads/pull_request/reports/html/index.html
+Generated TXT report (via XSLT): /home/joachimverleysen/Downloads/pull_request/reports/txt/index.txt
+Generated XML report: /home/joachimverleysen/Downloads/pull_request/reports/xml/index.xml
+Found 67 errors in 6 files (checked 9 source files)
