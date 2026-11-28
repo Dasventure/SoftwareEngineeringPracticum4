@@ -31,6 +31,8 @@ All context expect for the code itself are short checklists. Often times defined
 
 `NF-<number>: <quality attribute>: <one-liner sentence link to the system>`
 
+The reader of the review is assumed to have the list of non-functional requirements with the correct number references. (from session 2)
+
 Some NF's in that list are irrelevant to this specific pull request that the AI agent reviews. However, I still chose to add them for following reason: the prompt I made can essentially now be reused as template for any incoming pull request about the same university platform system.
 
 ### Which issues did the AI coding agent choose?
@@ -40,3 +42,5 @@ They chose: "Facility types are still hardcoded", "Facility access is not restri
 ### Which reviews did the AI coding agent create?
 
 The full review document can be found in `output/pull_request_review.md`. It contains the four issues with comments (aka the review) under them in the specified format (location - issue - why it matters now - suggestion)
+
+Quick mention: The AI hallucinated heavily at issue 4. It added integer raises to the issue and even provided a typed exception as suggestion. However, the review-guidelines document explicitly mentions to ignore integer exceptions!
