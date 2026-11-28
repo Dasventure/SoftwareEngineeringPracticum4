@@ -1,0 +1,997 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Pylint report</title>
+        <meta charset="utf-8">
+        <meta name="description" content="auto generated pylint report from JSON">
+        <style type="text/css">
+        body {
+            padding: 1em;
+            margin: 0;
+            background-color: #fffffe;
+            font-family: sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 0.5em;
+            border: 1px solid #333333;
+        }
+        th {
+            background-color: #DCDCDC;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Pylint report from report.jinja2</h1>
+
+        
+        <h2>Score</h2>
+        -3.06 / 10
+            
+        
+
+        <h2>Messages</h2>
+        
+        <h3>Module <code>src.special_facilities</code> (<code>src/special_facilities.py</code>)</h3>
+        <table>
+            <tr>
+                <th>Line</th>
+                <th>Col.</th>
+                <th>Type</th>
+                <th>Symbol</th>
+                <th>ID</th>
+                <th>Obj</th>
+                <th>Message</th>
+            </tr>
+            
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>convention</td>
+                <td><code>missing-module-docstring</code></td>
+                <td>C0114</td>
+                <td></td>
+                <td><pre>Missing module docstring</pre></td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>0</td>
+                <td>convention</td>
+                <td><code>wrong-import-order</code></td>
+                <td>C0411</td>
+                <td></td>
+                <td><pre>standard import &#34;enum.Enum&#34; should be placed before first party import &#34;src.user_registration.manager.UserManager&#34; </pre></td>
+            </tr>
+            
+            <tr>
+                <td>6</td>
+                <td>0</td>
+                <td>warning</td>
+                <td><code>redefined-builtin</code></td>
+                <td>W0622</td>
+                <td></td>
+                <td><pre>Redefining built-in &#39;pow&#39;</pre></td>
+            </tr>
+            
+            <tr>
+                <td>6</td>
+                <td>0</td>
+                <td>warning</td>
+                <td><code>wildcard-import</code></td>
+                <td>W0401</td>
+                <td></td>
+                <td><pre>Wildcard import math</pre></td>
+            </tr>
+            
+            <tr>
+                <td>6</td>
+                <td>0</td>
+                <td>convention</td>
+                <td><code>wrong-import-order</code></td>
+                <td>C0411</td>
+                <td></td>
+                <td><pre>standard import &#34;math.*&#34; should be placed before first party import &#34;src.user_registration.manager.UserManager&#34; </pre></td>
+            </tr>
+            
+            <tr>
+                <td>6</td>
+                <td>0</td>
+                <td>warning</td>
+                <td><code>unused-wildcard-import</code></td>
+                <td>W0614</td>
+                <td></td>
+                <td><pre>Unused import(s) acos, acosh, asin, asinh, atan, atan2, atanh, cbrt, ceil, comb, copysign, cos, cosh, degrees, dist, e, erf, erfc, exp, exp2, expm1, fabs, factorial, floor, fma, fmod, frexp, fsum, gamma, gcd, hypot, inf, isclose, isfinite, isinf, isnan, isqrt, lcm, ldexp, lgamma, log, log10, log1p, log2, modf, nan, nextafter, perm, pi, pow, prod, radians, remainder, sin, sinh, sqrt, sumprod, tan, tanh, tau, trunc and ulp from wildcard import of math</pre></td>
+            </tr>
+            
+            <tr>
+                <td>9</td>
+                <td>0</td>
+                <td>convention</td>
+                <td><code>missing-class-docstring</code></td>
+                <td>C0115</td>
+                <td>EnumSpecialFacilties</td>
+                <td><pre>Missing class docstring</pre></td>
+            </tr>
+            
+            <tr>
+                <td>18</td>
+                <td>0</td>
+                <td>convention</td>
+                <td><code>missing-class-docstring</code></td>
+                <td>C0115</td>
+                <td>Facility</td>
+                <td><pre>Missing class docstring</pre></td>
+            </tr>
+            
+            <tr>
+                <td>19</td>
+                <td>23</td>
+                <td>convention</td>
+                <td><code>invalid-name</code></td>
+                <td>C0103</td>
+                <td>Facility.__init__</td>
+                <td><pre>Argument name &#34;enumType&#34; doesn&#39;t conform to snake_case naming style</pre></td>
+            </tr>
+            
+            <tr>
+                <td>20</td>
+                <td>15</td>
+                <td>convention</td>
+                <td><code>singleton-comparison</code></td>
+                <td>C0121</td>
+                <td>Facility.__init__</td>
+                <td><pre>Comparison &#39;self.type != None&#39; should be &#39;self.type is not None&#39;</pre></td>
+            </tr>
+            
+            <tr>
+                <td>20</td>
+                <td>15</td>
+                <td>error</td>
+                <td><code>access-member-before-definition</code></td>
+                <td>E0203</td>
+                <td>Facility.__init__</td>
+                <td><pre>Access to member &#39;type&#39; before its definition line 21</pre></td>
+            </tr>
+            
+            <tr>
+                <td>23</td>
+                <td>4</td>
+                <td>error</td>
+                <td><code>no-method-argument</code></td>
+                <td>E0211</td>
+                <td>Facility.get_type</td>
+                <td><pre>Method &#39;get_type&#39; has no argument</pre></td>
+            </tr>
+            
+            <tr>
+                <td>27</td>
+                <td>15</td>
+                <td>error</td>
+                <td><code>undefined-variable</code></td>
+                <td>E0602</td>
+                <td>Facility.get_type</td>
+                <td><pre>Undefined variable &#39;self&#39;</pre></td>
+            </tr>
+            
+            <tr>
+                <td>35</td>
+                <td>4</td>
+                <td>error</td>
+                <td><code>invalid-str-returned</code></td>
+                <td>E0307</td>
+                <td>Facility.__str__</td>
+                <td><pre>__str__ does not return str</pre></td>
+            </tr>
+            
+            <tr>
+                <td>39</td>
+                <td>0</td>
+                <td>warning</td>
+                <td><code>missing-param-doc</code></td>
+                <td>W9015</td>
+                <td>get_special_facilities</td>
+                <td><pre>&#34;manager&#34; missing in parameter documentation</pre></td>
+            </tr>
+            
+            <tr>
+                <td>61</td>
+                <td>5</td>
+                <td>warning</td>
+                <td><code>fixme</code></td>
+                <td>W0511</td>
+                <td></td>
+                <td><pre>FIXME: fix</pre></td>
+            </tr>
+            
+            <tr>
+                <td>65</td>
+                <td>13</td>
+                <td>error</td>
+                <td><code>no-member</code></td>
+                <td>E1101</td>
+                <td>get_facility_name</td>
+                <td><pre>Class &#39;EnumSpecialFacilties&#39; has no &#39;GROOTLETTERTYPE&#39; member; maybe &#39;GROOT_LETTERTYPE&#39;?</pre></td>
+            </tr>
+            
+            <tr>
+                <td>69</td>
+                <td>13</td>
+                <td>error</td>
+                <td><code>no-member</code></td>
+                <td>E1101</td>
+                <td>get_facility_name</td>
+                <td><pre>Class &#39;EnumSpecialFacilties&#39; has no &#39;RUITJESPAPIER&#39; member</pre></td>
+            </tr>
+            
+            <tr>
+                <td>71</td>
+                <td>13</td>
+                <td>error</td>
+                <td><code>no-member</code></td>
+                <td>E1101</td>
+                <td>get_facility_name</td>
+                <td><pre>Class &#39;EnumSpecialFacilties&#39; has no &#39;VOORLEES_SOFTWARE&#39; member</pre></td>
+            </tr>
+            
+            <tr>
+                <td>77</td>
+                <td>0</td>
+                <td>convention</td>
+                <td><code>trailing-newlines</code></td>
+                <td>C0305</td>
+                <td></td>
+                <td><pre>Trailing newlines</pre></td>
+            </tr>
+            
+        </table>
+        
+        <h3>Module <code>src.user</code> (<code>src/user.py</code>)</h3>
+        <table>
+            <tr>
+                <th>Line</th>
+                <th>Col.</th>
+                <th>Type</th>
+                <th>Symbol</th>
+                <th>ID</th>
+                <th>Obj</th>
+                <th>Message</th>
+            </tr>
+            
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>convention</td>
+                <td><code>missing-module-docstring</code></td>
+                <td>C0114</td>
+                <td></td>
+                <td><pre>Missing module docstring</pre></td>
+            </tr>
+            
+            <tr>
+                <td>5</td>
+                <td>0</td>
+                <td>error</td>
+                <td><code>import-error</code></td>
+                <td>E0401</td>
+                <td></td>
+                <td><pre>Unable to import &#39;src.network&#39;</pre></td>
+            </tr>
+            
+            <tr>
+                <td>5</td>
+                <td>0</td>
+                <td>error</td>
+                <td><code>no-name-in-module</code></td>
+                <td>E0611</td>
+                <td></td>
+                <td><pre>No name &#39;network&#39; in module &#39;src&#39;</pre></td>
+            </tr>
+            
+            <tr>
+                <td>11</td>
+                <td>0</td>
+                <td>convention</td>
+                <td><code>missing-class-docstring</code></td>
+                <td>C0115</td>
+                <td>UserRegistrationException</td>
+                <td><pre>Missing class docstring</pre></td>
+            </tr>
+            
+            <tr>
+                <td>25</td>
+                <td>15</td>
+                <td>warning</td>
+                <td><code>bad-chained-comparison</code></td>
+                <td>W3601</td>
+                <td>User.__init__</td>
+                <td><pre>Suspicious 2-part chained comparison using semantically incompatible operators (&#39;&gt;&#39; and &#39;is not&#39;)</pre></td>
+            </tr>
+            
+            <tr>
+                <td>40</td>
+                <td>4</td>
+                <td>convention</td>
+                <td><code>missing-function-docstring</code></td>
+                <td>C0116</td>
+                <td>User.register</td>
+                <td><pre>Missing function or method docstring</pre></td>
+            </tr>
+            
+            <tr>
+                <td>44</td>
+                <td>0</td>
+                <td>warning</td>
+                <td><code>abstract-method</code></td>
+                <td>W0223</td>
+                <td>Student</td>
+                <td><pre>Method &#39;register&#39; is abstract in class &#39;User&#39; but is not overridden in child class &#39;Student&#39;</pre></td>
+            </tr>
+            
+            <tr>
+                <td>48</td>
+                <td>63</td>
+                <td>warning</td>
+                <td><code>redefined-outer-name</code></td>
+                <td>W0621</td>
+                <td>Student.__init__</td>
+                <td><pre>Redefining name &#39;user&#39; from outer scope (line 92)</pre></td>
+            </tr>
+            
+            <tr>
+                <td>49</td>
+                <td>15</td>
+                <td>convention</td>
+                <td><code>unidiomatic-typecheck</code></td>
+                <td>C0123</td>
+                <td>Student.__init__</td>
+                <td><pre>Use isinstance() rather than type() for a typecheck.</pre></td>
+            </tr>
+            
+            <tr>
+                <td>53</td>
+                <td>4</td>
+                <td>convention</td>
+                <td><code>missing-function-docstring</code></td>
+                <td>C0116</td>
+                <td>Student.get_facilities</td>
+                <td><pre>Missing function or method docstring</pre></td>
+            </tr>
+            
+            <tr>
+                <td>55</td>
+                <td>8</td>
+                <td>warning</td>
+                <td><code>unreachable</code></td>
+                <td>W0101</td>
+                <td>Student.get_facilities</td>
+                <td><pre>Unreachable code</pre></td>
+            </tr>
+            
+            <tr>
+                <td>63</td>
+                <td>4</td>
+                <td>convention</td>
+                <td><code>missing-function-docstring</code></td>
+                <td>C0116</td>
+                <td>Student.set_program</td>
+                <td><pre>Missing function or method docstring</pre></td>
+            </tr>
+            
+            <tr>
+                <td>64</td>
+                <td>8</td>
+                <td>warning</td>
+                <td><code>attribute-defined-outside-init</code></td>
+                <td>W0201</td>
+                <td>Student.set_program</td>
+                <td><pre>Attribute &#39;degree&#39; defined outside __init__</pre></td>
+            </tr>
+            
+            <tr>
+                <td>67</td>
+                <td>0</td>
+                <td>warning</td>
+                <td><code>abstract-method</code></td>
+                <td>W0223</td>
+                <td>Admin</td>
+                <td><pre>Method &#39;register&#39; is abstract in class &#39;User&#39; but is not overridden in child class &#39;Admin&#39;</pre></td>
+            </tr>
+            
+            <tr>
+                <td>69</td>
+                <td>23</td>
+                <td>warning</td>
+                <td><code>redefined-outer-name</code></td>
+                <td>W0621</td>
+                <td>Admin.__init__</td>
+                <td><pre>Redefining name &#39;user&#39; from outer scope (line 92)</pre></td>
+            </tr>
+            
+            <tr>
+                <td>70</td>
+                <td>15</td>
+                <td>convention</td>
+                <td><code>unidiomatic-typecheck</code></td>
+                <td>C0123</td>
+                <td>Admin.__init__</td>
+                <td><pre>Use isinstance() rather than type() for a typecheck.</pre></td>
+            </tr>
+            
+            <tr>
+                <td>80</td>
+                <td>0</td>
+                <td>convention</td>
+                <td><code>missing-function-docstring</code></td>
+                <td>C0116</td>
+                <td>register_user</td>
+                <td><pre>Missing function or method docstring</pre></td>
+            </tr>
+            
+            <tr>
+                <td>80</td>
+                <td>41</td>
+                <td>convention</td>
+                <td><code>invalid-name</code></td>
+                <td>C0103</td>
+                <td>register_user</td>
+                <td><pre>Argument name &#34;userMan&#34; doesn&#39;t conform to snake_case naming style</pre></td>
+            </tr>
+            
+            <tr>
+                <td>81</td>
+                <td>4</td>
+                <td>warning</td>
+                <td><code>redefined-outer-name</code></td>
+                <td>W0621</td>
+                <td>register_user</td>
+                <td><pre>Redefining name &#39;user&#39; from outer scope (line 92)</pre></td>
+            </tr>
+            
+            <tr>
+                <td>81</td>
+                <td>11</td>
+                <td>error</td>
+                <td><code>abstract-class-instantiated</code></td>
+                <td>E0110</td>
+                <td>register_user</td>
+                <td><pre>Abstract class &#39;User&#39; with abstract methods instantiated</pre></td>
+            </tr>
+            
+            <tr>
+                <td>84</td>
+                <td>14</td>
+                <td>error</td>
+                <td><code>abstract-class-instantiated</code></td>
+                <td>E0110</td>
+                <td>register_user</td>
+                <td><pre>Abstract class &#39;Student&#39; with abstract methods instantiated</pre></td>
+            </tr>
+            
+            <tr>
+                <td>92</td>
+                <td>11</td>
+                <td>error</td>
+                <td><code>abstract-class-instantiated</code></td>
+                <td>E0110</td>
+                <td></td>
+                <td><pre>Abstract class &#39;User&#39; with abstract methods instantiated</pre></td>
+            </tr>
+            
+        </table>
+        
+        <h3>Module <code>src.user_registration.manager</code> (<code>src/user_registration/manager.py</code>)</h3>
+        <table>
+            <tr>
+                <th>Line</th>
+                <th>Col.</th>
+                <th>Type</th>
+                <th>Symbol</th>
+                <th>ID</th>
+                <th>Obj</th>
+                <th>Message</th>
+            </tr>
+            
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>convention</td>
+                <td><code>missing-module-docstring</code></td>
+                <td>C0114</td>
+                <td></td>
+                <td><pre>Missing module docstring</pre></td>
+            </tr>
+            
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>refactor</td>
+                <td><code>duplicate-code</code></td>
+                <td>R0801</td>
+                <td></td>
+                <td><pre>Similar lines in 2 files
+==src.user:[80:86]
+==src.user_registration.manager:[28:34]
+    user = User(first_name=form_data.get_name().split(&#34; &#34;)[0],
+                last_name=form_data.get_name().split(&#34; &#34;)[1],
+                dob=form_data.get_dob())
+    student = Student(facilities=[], user=user)
+    student.set_program(form_data.get_degree())
+</pre></td>
+            </tr>
+            
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>refactor</td>
+                <td><code>cyclic-import</code></td>
+                <td>R0401</td>
+                <td></td>
+                <td><pre>Cyclic import (src.user -&gt; src.user_registration.manager)</pre></td>
+            </tr>
+            
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>refactor</td>
+                <td><code>cyclic-import</code></td>
+                <td>R0401</td>
+                <td></td>
+                <td><pre>Cyclic import (src.special_facilities -&gt; src.user_registration.manager -&gt; src.user)</pre></td>
+            </tr>
+            
+            <tr>
+                <td>3</td>
+                <td>0</td>
+                <td>convention</td>
+                <td><code>wrong-import-order</code></td>
+                <td>C0411</td>
+                <td></td>
+                <td><pre>standard import &#34;logging.warn&#34; should be placed before first party imports &#34;src.user.User&#34;, &#34;src.user_registration.signup_form.SignupForm&#34; </pre></td>
+            </tr>
+            
+            <tr>
+                <td>13</td>
+                <td>4</td>
+                <td>convention</td>
+                <td><code>missing-function-docstring</code></td>
+                <td>C0116</td>
+                <td>UserManager.get_user</td>
+                <td><pre>Missing function or method docstring</pre></td>
+            </tr>
+            
+            <tr>
+                <td>13</td>
+                <td>4</td>
+                <td>error</td>
+                <td><code>no-self-argument</code></td>
+                <td>E0213</td>
+                <td>UserManager.get_user</td>
+                <td><pre>Method &#39;get_user&#39; should have &#34;self&#34; as first argument</pre></td>
+            </tr>
+            
+            <tr>
+                <td>13</td>
+                <td>4</td>
+                <td>refactor</td>
+                <td><code>inconsistent-return-statements</code></td>
+                <td>R1710</td>
+                <td>UserManager.get_user</td>
+                <td><pre>Either all return statements in a function should return an expression, or none of them should.</pre></td>
+            </tr>
+            
+            <tr>
+                <td>14</td>
+                <td>20</td>
+                <td>error</td>
+                <td><code>undefined-variable</code></td>
+                <td>E0602</td>
+                <td>UserManager.get_user</td>
+                <td><pre>Undefined variable &#39;self&#39;</pre></td>
+            </tr>
+            
+            <tr>
+                <td>18</td>
+                <td>4</td>
+                <td>convention</td>
+                <td><code>missing-function-docstring</code></td>
+                <td>C0116</td>
+                <td>UserManager.edit_user</td>
+                <td><pre>Missing function or method docstring</pre></td>
+            </tr>
+            
+            <tr>
+                <td>18</td>
+                <td>36</td>
+                <td>convention</td>
+                <td><code>invalid-name</code></td>
+                <td>C0103</td>
+                <td>UserManager.edit_user</td>
+                <td><pre>Argument name &#34;userName&#34; doesn&#39;t conform to snake_case naming style</pre></td>
+            </tr>
+            
+            <tr>
+                <td>19</td>
+                <td>8</td>
+                <td>error</td>
+                <td><code>too-many-function-args</code></td>
+                <td>E1121</td>
+                <td>UserManager.edit_user</td>
+                <td><pre>Too many positional arguments for method call</pre></td>
+            </tr>
+            
+            <tr>
+                <td>22</td>
+                <td>4</td>
+                <td>convention</td>
+                <td><code>missing-function-docstring</code></td>
+                <td>C0116</td>
+                <td>UserManager.add_student</td>
+                <td><pre>Missing function or method docstring</pre></td>
+            </tr>
+            
+            <tr>
+                <td>27</td>
+                <td>0</td>
+                <td>convention</td>
+                <td><code>missing-function-docstring</code></td>
+                <td>C0116</td>
+                <td>register_user</td>
+                <td><pre>Missing function or method docstring</pre></td>
+            </tr>
+            
+            <tr>
+                <td>27</td>
+                <td>41</td>
+                <td>convention</td>
+                <td><code>invalid-name</code></td>
+                <td>C0103</td>
+                <td>register_user</td>
+                <td><pre>Argument name &#34;userMan&#34; doesn&#39;t conform to snake_case naming style</pre></td>
+            </tr>
+            
+            <tr>
+                <td>29</td>
+                <td>15</td>
+                <td>error</td>
+                <td><code>abstract-class-instantiated</code></td>
+                <td>E0110</td>
+                <td>register_user</td>
+                <td><pre>Abstract class &#39;User&#39; with abstract methods instantiated</pre></td>
+            </tr>
+            
+            <tr>
+                <td>32</td>
+                <td>18</td>
+                <td>error</td>
+                <td><code>abstract-class-instantiated</code></td>
+                <td>E0110</td>
+                <td>register_user</td>
+                <td><pre>Abstract class &#39;Student&#39; with abstract methods instantiated</pre></td>
+            </tr>
+            
+            <tr>
+                <td>38</td>
+                <td>8</td>
+                <td>warning</td>
+                <td><code>raise-missing-from</code></td>
+                <td>W0707</td>
+                <td>register_user</td>
+                <td><pre>Consider explicitly re-raising using &#39;except Exception as exc&#39; and &#39;raise 3 from exc&#39;</pre></td>
+            </tr>
+            
+            <tr>
+                <td>39</td>
+                <td>11</td>
+                <td>error</td>
+                <td><code>bad-except-order</code></td>
+                <td>E0701</td>
+                <td>register_user</td>
+                <td><pre>Bad except clauses order (Exception is an ancestor class of UserRegistrationException)</pre></td>
+            </tr>
+            
+            <tr>
+                <td>41</td>
+                <td>8</td>
+                <td>warning</td>
+                <td><code>raise-missing-from</code></td>
+                <td>W0707</td>
+                <td>register_user</td>
+                <td><pre>Consider explicitly re-raising using &#39;except UserRegistrationException as exc&#39; and &#39;raise 2 from exc&#39;</pre></td>
+            </tr>
+            
+            <tr>
+                <td>42</td>
+                <td>11</td>
+                <td>error</td>
+                <td><code>bad-except-order</code></td>
+                <td>E0701</td>
+                <td>register_user</td>
+                <td><pre>Bad except clauses order (Exception is an ancestor class of ValueError)</pre></td>
+            </tr>
+            
+            <tr>
+                <td>44</td>
+                <td>8</td>
+                <td>warning</td>
+                <td><code>raise-missing-from</code></td>
+                <td>W0707</td>
+                <td>register_user</td>
+                <td><pre>Consider explicitly re-raising using &#39;except ValueError as exc&#39; and &#39;raise 1 from exc&#39;</pre></td>
+            </tr>
+            
+            <tr>
+                <td>47</td>
+                <td>0</td>
+                <td>convention</td>
+                <td><code>trailing-newlines</code></td>
+                <td>C0305</td>
+                <td></td>
+                <td><pre>Trailing newlines</pre></td>
+            </tr>
+            
+        </table>
+        
+
+        <h2>Metrics</h2>
+        
+
+        <h3>Count per types</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Count</th>
+            </tr>
+            
+            <tr>
+                <td>convention</td>
+                <td>26</td>
+            </tr>
+            
+            <tr>
+                <td>error</td>
+                <td>19</td>
+            </tr>
+            
+            <tr>
+                <td>warning</td>
+                <td>16</td>
+            </tr>
+            
+            <tr>
+                <td>refactor</td>
+                <td>4</td>
+            </tr>
+            
+        </table>
+        
+
+        <h3>Count per messages</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Count</th>
+            </tr>
+            
+            <tr>
+                <td>missing-module-docstring</td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td>import-error</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>no-name-in-module</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>missing-class-docstring</td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td>bad-chained-comparison</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>missing-function-docstring</td>
+                <td>8</td>
+            </tr>
+            
+            <tr>
+                <td>abstract-method</td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td>redefined-outer-name</td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td>unidiomatic-typecheck</td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td>unreachable</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>attribute-defined-outside-init</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>invalid-name</td>
+                <td>4</td>
+            </tr>
+            
+            <tr>
+                <td>abstract-class-instantiated</td>
+                <td>5</td>
+            </tr>
+            
+            <tr>
+                <td>trailing-newlines</td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td>fixme</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>redefined-builtin</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>wildcard-import</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>singleton-comparison</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>no-method-argument</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>undefined-variable</td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td>invalid-str-returned</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>access-member-before-definition</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>missing-param-doc</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>no-member</td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td>wrong-import-order</td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td>unused-wildcard-import</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>no-self-argument</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>inconsistent-return-statements</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>too-many-function-args</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>bad-except-order</td>
+                <td>2</td>
+            </tr>
+            
+            <tr>
+                <td>raise-missing-from</td>
+                <td>3</td>
+            </tr>
+            
+            <tr>
+                <td>duplicate-code</td>
+                <td>1</td>
+            </tr>
+            
+            <tr>
+                <td>cyclic-import</td>
+                <td>2</td>
+            </tr>
+            
+        </table>
+        
+
+        <h3>Count per modules</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Count</th>
+            </tr>
+            
+            <tr>
+                <td>src.user</td>
+                <td>22</td>
+            </tr>
+            
+            <tr>
+                <td>src.special_facilities</td>
+                <td>20</td>
+            </tr>
+            
+            <tr>
+                <td>src.user_registration.manager</td>
+                <td>23</td>
+            </tr>
+            
+        </table>
+        
+
+        <h3>Count per path</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Count</th>
+            </tr>
+            
+            <tr>
+                <td>src/user.py</td>
+                <td>22</td>
+            </tr>
+            
+            <tr>
+                <td>src/special_facilities.py</td>
+                <td>20</td>
+            </tr>
+            
+            <tr>
+                <td>src/user_registration/manager.py</td>
+                <td>23</td>
+            </tr>
+            
+        </table>
+        
+
+    </body>
+</html>

@@ -1,0 +1,7 @@
+pip install pylint pylint-json2html
+
+pylint --generate-rcfile > .pylintrc
+
+mkdir reports
+pylint --rcfile=.pylintrc src
+pylint-json2html -f jsonextended -o reports/pylint_report.html reports/pylint_report.json
